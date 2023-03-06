@@ -1,18 +1,21 @@
-import React from "react";
-import NavBar from "./Components/Navbar/NavBar";
-import Banner from './Components/Banner/Banner';
-import RowPost from './Components/RowPost/RowPost'
-import {originals,action} from "./urls"
-import './App.css';
+
+import Navbar from "./Component/Navbar/Navbar";
+import {original,drama} from './urls'
+import "./App.css";
+import Banner from "./Component/Banner/Banner";
+import RowPost from "./Component/RowPost/RowPost";
+
 function App() {
+
+
   return (
-   <div className="App">
-    <NavBar/>
-    <Banner/>
-    <RowPost url={originals} title='Netflix Originals'/>
-    <RowPost url={action} title='Action' isSmall />
-   </div>
-  )
+    <div className="App">
+      <Navbar/>
+      <Banner/>
+      <RowPost url={original} title='Netflix Originals'/>
+      <RowPost url={drama} title='Drama' isSmall/>
+    </div>
+  );
 }
 
 export default App;
